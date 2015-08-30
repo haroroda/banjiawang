@@ -16,8 +16,8 @@
 
 ##简写
 
-|页面|英文|简写|
-|--|--|--|
+|页面         | 英文                  |  简写              |
+|--           | --                    |  --                |
 |首页         | index                 |  index             |
 |联谊活动页面 | Friendship activities |  friendship_act    |
 |特色公寓页面 | Features apartment    |  feature_apartment |

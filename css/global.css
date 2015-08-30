@@ -1,0 +1,53 @@
+.container {
+	/*width:100%;*/
+	padding-right: 0;
+    padding-left: 0;
+}
+
+/*@media (min-width: 1600px) {
+	.container {
+    	width: 1500px;
+   }
+}
+@media (min-width: 1900px) {
+	.container {
+    	width: 1850px;
+   }
+}*/
+a:hover{
+	text-decoration: none;
+}
+.form-inline {
+	margin-right: auto;
+	margin-left: auto;
+}
+.iconsfont {
+	color: #666;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-size: 50px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	float: left;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/*.tese {
+	float:right;
+}*/
+.world-card{
+	height: 326px;
+	color: #fff;
+}
+.world-card > a {
+	height: 326px;
+	color: #fff;
+}
+.card-middle {
+	vertical-align: middle;
+}
