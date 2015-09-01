@@ -98,67 +98,73 @@
                 <div class="swiper-slide">
                     <img src="imgs/swiper_img_5.jpg" alt="" style="width:100%;">
                 </div>
+
             </div>
-            
+            <!-- 导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
             <!-- 搜索框 -->
             <div class="search">
                 <form class="form-inline">
-                    <div class="form-group">
-                        <label for="search_address" class="sr-only">地点</label>
+                    <div class="form-group has-feedback">
+                        <label for="search_address" class="sr-only control-label">地点</label>
                         <input type="text" class="form-control" id="search_address" placeholder="地点">
+                        <span class="glyphicon glyphicon-map-marker form-control-feedback" aria-hidden="true"></span>      
                     </div>
-                    <div class="form-group">
-                        <label for="search_start_day" class="sr-only">入住时间</label>
+                    <div class="form-group has-feedback">
+                        <label for="search_start_day" class="sr-only control-label">入住时间</label>
                         <input class="form-control" type="text" id="search_start_day" placeholder="入住日期">
+                        <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>      
                     </div>
-                    <div class="form-group">
-                        <label for="search_end_day" class="sr-only">介绍时间</label>
+                    <div class="form-group has-feedback">
+                        <label for="search_end_day" class="sr-only control-label">介绍时间</label>
                         <input class="form-control" type="text" id="search_end_day" placeholder="退房日期">
+                        <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
                     </div>
-                    <div class="form-group">
-                        <label for="search_doing_what" class="sr-only">去干嘛</label>
+                    <div class="form-group has-feedback">
+                        <label for="search_doing_what" class="sr-only control-label">去干嘛</label>
                         <select class="form-control" name="" id="search_doing_what">
                             <option value="1">联谊</option>
                             <option value="2">住宿</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default" value="搜索"></input>
+                    </div> 
                 </form>
             </div>
             
-            <!-- 导航按钮 -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            
         </div>
 
         <!-- 轮播 end -->
         
         <!-- 半家网特色 begin -->
         <div class="panel-dark">
-            <div class="page-container-responsive">
+            <div class="page-container-responsive hide-sm">
                 <div class="row-space-4">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <i class="icon-earth iconsfont"></i>
                         <div class="tese text-center">
                             <div class="h3"><strong>广交好友</strong></div>
                             <div><small>有朋在远方</small></div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <i class="icon-home3 iconsfont"></i>
                         <div class="tese text-center">
                             <div class="h3"><strong>居家体验</strong></div>
                             <div><small>走到哪里都是居家的感觉</small></div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <i class="icon-leaf iconsfont"></i>
                         <div class="tese text-center">
                             <div class="h3"><strong>特色奇居</strong></div>
                             <div><small>书屋城堡应有尽有</small></div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <i class="icon-coffee iconsfont"></i>
                         <div class="tese text-center">
                             <div class="h3"><strong>融入当地</strong></div>
@@ -171,11 +177,11 @@
 
         <!-- 半家网特色 end -->
 
-        <hr style="border:1px solid #555555;" />
+        <hr style="border-top: 1px solid #ccc;height: 1px;width: 94%;padding-left:15px;padding-right:15px;" />
         <!-- 探索世界 start -->
         <div class="explore-world">
             <div class="make-friends text-center">
-                <div class="h3">有朋在远方</div>
+                <div class="h3"><strong>有朋在远方</strong></div>
                 <div><small>全球家庭联谊活动</small></div>
             </div>
 
