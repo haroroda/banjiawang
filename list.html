@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>特色公寓</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/masonry-docs.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		  <!-- nav begin -->
+        <nav class="navbar navbar-default">
+
+            <div class="container-fluid">
+                
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="imgs/nav-logo.gif" alt="">
+                    </a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+                    <li><a href="javascript:void(0);">联谊活动</a></li>
+                    <li><a href="javascript:void(0);">特色公寓</a></li>
+                    <li><a href="javascript:void(0);">优惠酒店</a></li>
+                    <li><a href="javascript:void(0);">民俗活动</a></li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right" style="display:block;">
+                    <li><a href="javascript:void(0);">登陆</a></li>
+                    <li><a href="javascript:void(0);">注册</a></li>
+                    <li><a href="javascript:void(0);">帮助</a></li>    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right" style="display:none;">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户名<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0);">个人信息</a>
+                            <li><a href="javascript:void(0);">我的订单</a>
+                            <li><a href="javascript:void(0);">设置</a>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);">注销</a>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">帮助</a></li>    
+                </ul>
+
+            </div>
+            <!-- container-fluid -->
+        </nav>   
+        <!-- nav end -->
+        <div id="myCarousel" class="carousel slide">
+   		<!-- 轮播（Carousel）指标 -->
+   		 	<ol class="carousel-indicators">
+     			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      			<li data-target="#myCarousel" data-slide-to="1"></li>
+      			<li data-target="#myCarousel" data-slide-to="2"></li>
+   			</ol>  
+   		<!-- 轮播（Carousel）项目 -->
+   			<div class="carousel-inner">
+     			<div class="item active">
+         			<div class="text-center"><img src="imgs/01.jpg" alt="First slide"></div>
+      			</div>
+     			<div class="item">
+         			<div class="text-center"><img src="imgs/02.jpg" alt="First slide"></div>
+      			</div>
+        		<div class="item">
+         			<div class="text-center"><img src="imgs/03.jpg" alt="First slide"></div>
+      			</div>
+   			</div>
+   		<!-- 轮播（Carousel）导航 -->
+   			<a class="carousel-control left" href="#myCarousel"
+      data-slide="prev">&lsaquo;</a>
+   			<a class="carousel-control right" href="#myCarousel"
+      data-slide="next">&rsaquo;</a>
+		</div>
+		<!--弹出框（popover)-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+            //自定义popover显示的内容
+            $('#typeselect').popover({ 
+            html : true,
+            trigger : 'manual',
+            content : function() {
+                return $("#typeselect-content").html();
+                }
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(this).siblings(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+                });
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide")
+                    }
+                }, 100);
+            });
+            $('#cityselect').popover({ 
+            html : true,
+            trigger : 'manual',
+            content: function() {
+                return $("#cityselect-content").html();
+                }
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(this).siblings(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+                });
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide")
+                        }
+                    }, 100);
+                });
+            });
+        </script>
+		<div class="btn-group-lg pager">
+            <a href="#" class="btn btn-primary" id="typeselect" data-toggle="popover" data-container="body" data-placement="bottom" >类型筛选<b class="caret"></b></a>
+			<a href="#" class="btn btn-info" id="cityselect" data-toggle="popover" data-container="body" data-placement="bottom">城市筛选<b class="caret"></b></a>
+		</div>
+        <div class="checkbox-inline popover fade bottom" id="typeselect-content">
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">民宅</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">别墅</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">青年旅馆</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">客栈</label>
+        </div>
+        <div class="checkbox-inline popover fade bottom" id="cityselect-content">
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">南京</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">上海</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">杭州</label>
+            <label class="checkbox-inline"><input type="radio" name="" id="" value="">安徽</label>
+        </div>
+        <!--瀑布流展示-->
+        <style type="text/css">
+            .container-fluid {
+                padding: 20px;
+                /*background-color: blue;*/
+            }
+            .box {
+                margin-bottom: 20px;
+                float: left;
+                /*width: 220px;*/
+                /*width: 366px;*/
+                width: 275px;
+                text-align: center;
+                /*background-color: yellow;*/
+            }
+            .box img {
+                max-width: 90%;
+            } 
+        </style>
+        <script type="text/javascript">
+             $(function(){
+                var $container = $('#masonry');
+                $container.imagesLoaded( function(){
+                $container.masonry({
+                itemSelector : '.box',
+                gutterWidth : 20,
+                isAnimated: true,
+                    });
+                });
+            });
+        </script>
+        <div id="masonry" class="container-fluid">
+            <div class="box"><a href="#"><img src="imgs/4.jpg"></a></div>
+            <div class="box"><img src="imgs/5.jpg"></div>
+            <div class="box"><img src="imgs/6.jpg"></div>
+            <div class="box"><img src="imgs/7.jpg"></div>
+            <div class="box"><img src="imgs/8.jpg"></div>
+            <div class="box"><img src="imgs/9.jpg"></div>
+            <div class="box"><img src="imgs/10.jpg"></div>
+            <div class="box"><img src="imgs/11.jpg"></div>
+            <div class="box"><img src="imgs/12.jpg"></div>
+            <div class="box"><img src="imgs/13.jpg"></div>
+            <div class="box"><img src="imgs/14.jpg"></div>
+            <div class="box"><img src="imgs/15.jpg"></div>
+            <div class="box"><img src="imgs/16.jpg"></div>
+        </div>
+	</div>
+</body>
+</html>
