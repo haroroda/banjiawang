@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/masonry-docs.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 <body>
 	<div class="container">
@@ -142,24 +143,41 @@
             <label class="checkbox-inline"><input type="radio" name="" id="" value="">杭州</label>
             <label class="checkbox-inline"><input type="radio" name="" id="" value="">安徽</label>
         </div>
+    </div>
         <!--瀑布流展示-->
         <style type="text/css">
             .container-fluid {
                 padding: 20px;
+                width: 90%;
                 /*background-color: blue;*/
             }
             .box {
                 margin-bottom: 20px;
+                margin-left: 15px;
                 float: left;
                 /*width: 220px;*/
+                /*width: 275px;*/
                 /*width: 366px;*/
-                width: 275px;
-                text-align: center;
+                width: 31%;
+                border: 1px solid #ddd;
                 /*background-color: yellow;*/
             }
             .box img {
-                max-width: 90%;
+                max-width: 100%;
             } 
+            .box h4{
+                margin-left: 10px;
+            }
+            .box h5{
+                margin-left: 10px;
+            }
+            .box h4 span{
+                margin-right: 10px;
+                float: right;
+            }
+            .box p span{
+                margin-left: 10px;
+            }
         </style>
         <script type="text/javascript">
              $(function(){
@@ -174,20 +192,111 @@
             });
         </script>
         <div id="masonry" class="container-fluid">
-            <div class="box"><a href="#"><img src="imgs/4.jpg"></a></div>
-            <div class="box"><img src="imgs/5.jpg"></div>
-            <div class="box"><img src="imgs/6.jpg"></div>
-            <div class="box"><img src="imgs/7.jpg"></div>
-            <div class="box"><img src="imgs/8.jpg"></div>
-            <div class="box"><img src="imgs/9.jpg"></div>
-            <div class="box"><img src="imgs/10.jpg"></div>
-            <div class="box"><img src="imgs/11.jpg"></div>
-            <div class="box"><img src="imgs/12.jpg"></div>
-            <div class="box"><img src="imgs/13.jpg"></div>
-            <div class="box"><img src="imgs/14.jpg"></div>
-            <div class="box"><img src="imgs/15.jpg"></div>
-            <div class="box"><img src="imgs/16.jpg"></div>
+            <div class="box">
+                <a href="#"><img src="imgs/4.jpg"></a>
+                <h4><a href="#">泰安途家桃花峪独栋山景四卧别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/5.jpg"></a>
+                <h4><a href="#">峨眉山山与湖温泉两房蜜月型别墅</a><span><label class="text-danger">$1529</label>/晚<span/></h4>
+                <h5 class="text-muted">联排别墅&nbsp|&nbsp峨眉山&nbsp峨眉山</h5>
+                <hr>
+                <h5>园林式别墅房</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/6.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/7.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/8.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/9.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/10.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/11.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/12.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/13.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/14.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/15.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>    
+            </div>
+            <div class="box">
+                <a href="#"><img src="imgs/16.jpg"></a>
+                <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
+                <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
+                <hr>
+                <h5>养生家苑</h5>
+                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+            </div>
         </div>
-	</div>
+	<!-- </div> -->
 </body>
 </html>
