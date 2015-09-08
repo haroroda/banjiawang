@@ -2,7 +2,13 @@
 
 ##前端
 
->avalon 框架加 bootstrap框架
+###CSS框架
+>bootstrap框架
+
+###MVVM框架
+>avalon.js 框架 或者 vue.js 框架
+
+暂未决定
 
 ##后端
 
