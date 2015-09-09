@@ -378,3 +378,17 @@ a:hover{
 .copy-right .right {
 	margin-top: 7px;
 }
+#select-lang,
+#select-curr {
+	background-color: #565a5c;
+	color: #fff;
+}
+.about-us {
+	display: table;
+}
+.list-layout li{
+	list-style: none;
+}
+.list-layout a{
+	color: #fff;
+}
