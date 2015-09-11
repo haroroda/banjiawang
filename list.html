@@ -66,13 +66,13 @@
    		<!-- 轮播（Carousel）项目 -->
    			<div class="carousel-inner">
      			<div class="item active">
-         			<div class="text-center"><img src="imgs/01.jpg" alt="First slide"></div>
+         			<div class="text-center"><img src="imgs/Carousel-01.jpg" alt="First slide"></div>
       			</div>
      			<div class="item">
-         			<div class="text-center"><img src="imgs/02.jpg" alt="First slide"></div>
+         			<div class="text-center"><img src="imgs/Carousel-02.jpg" alt="First slide"></div>
       			</div>
         		<div class="item">
-         			<div class="text-center"><img src="imgs/03.jpg" alt="First slide"></div>
+         			<div class="text-center"><img src="imgs/Carousel-03.jpg" alt="First slide"></div>
       			</div>
    			</div>
    		<!-- 轮播（Carousel）导航 -->
@@ -149,18 +149,19 @@
             .container-fluid {
                 padding: 20px;
                 width: 90%;
-                /*background-color: blue;*/
             }
             .box {
                 margin-bottom: 20px;
                 margin-left: 15px;
                 float: left;
-                /*width: 220px;*/
-                /*width: 275px;*/
-                /*width: 366px;*/
+                /*width: 220px;*/  /*一行五个*/
+                /*width: 275px;*/  /*一行四个*/
+                /*width: 366px;*/  /*一行三个*/
                 width: 31%;
                 border: 1px solid #ddd;
-                /*background-color: yellow;*/
+            }
+            .box p a{
+                color: black;
             }
             .box img {
                 max-width: 100%;
@@ -190,113 +191,141 @@
                     });
                 });
             });
+            function ChangeGlyphicon(){
+                $("Glyphicon").attr("Glyphicon","glyphicon-hand-up");
+            }
         </script>
         <div id="masonry" class="container-fluid">
             <div class="box">
-                <a href="#"><img src="imgs/4.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-4.jpg"></a>
                 <h4><a href="#">泰安途家桃花峪独栋山景四卧别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up" onclick="ChangeGlyphicon()" id="glyphicon"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/5.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-5.jpg"></a>
                 <h4><a href="#">峨眉山山与湖温泉两房蜜月型别墅</a><span><label class="text-danger">$1529</label>/晚<span/></h4>
                 <h5 class="text-muted">联排别墅&nbsp|&nbsp峨眉山&nbsp峨眉山</h5>
                 <hr>
                 <h5>园林式别墅房</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/6.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-6.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/7.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-7.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/8.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-8.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/9.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-9.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/10.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-10.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/11.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-11.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/12.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-12.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/13.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-13.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/14.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-14.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/15.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-15.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>    
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
             <div class="box">
-                <a href="#"><img src="imgs/16.jpg"></a>
+                <a href="#"><img src="imgs/Waterfall-show-16.jpg"></a>
                 <h4><a href="#">千岛湖途家翡翠岛三居室豪华湖景别墅</a><span><label class="text-danger">$1028</label>/晚<span/></h4>
                 <h5 class="text-muted">精品公寓&nbsp|&nbsp泰安&nbsp岱岳区</h5>
                 <hr>
                 <h5>养生家苑</h5>
-                <p><span>点赞</span><span>收藏</span><span>分享</span></p>
+                <p><a href="#"><span class="glyphicon glyphicon-thumbs-up"></span><span>点赞</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-heart-empty"></span><span>收藏</span></a>&nbsp
+                <a href="#"><span class="glyphicon glyphicon-share"></span><span>分享</span></a></p>
             </div>
         </div>
-	<!-- </div> -->
 </body>
 </html>
