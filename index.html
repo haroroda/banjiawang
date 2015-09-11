@@ -17,16 +17,65 @@
     <link href="css/fontsicon.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
     <!--[if lt IE 8]>
-    <div class="ie-tips">
-        <span> 您使用的IE浏览器版本较低！</span>本站已不再支持较低版本的IE浏览器，已为您启用了精简版。为了更好的体验本站内容，建议您升级<a target="_blank" href="http://www.microsoft.com/zh-cn/download/ie.aspx?q=internet+explorer">Internet Explorer浏览器</a>或安装非IE内核浏览器。请下载 <a href="http://down.360safe.com/se/360se7.1.1.556.exe" class="link-btn" target="_blank">360浏览器</a>或<a href="http://dldir1.qq.com/invc/tt/QQBrowser_Setup_Wireless.exe" class="link-btn" target="_blank">QQ浏览器</a>。
+    <div id="ie-modal-bg">
     </div>
+    <div id="ie-modal-content">
+        <div id="ie-modal-close">
+            <a href="javascript:void(0)" id="ie-close-button">x</a>
+        </div>
+        <div class="text-center row-space-2">
+            <img alt="Firefox-logo-8286511ec2868a2f65bba904dc8928e2" src="https://z2.muscache.com/airbnb/static/landing_pages/firefox-logo-8286511ec2868a2f65bba904dc8928e2.png" />
+        </div>
+        <div class="h3 text-center row-space-2">
+            更佳、更快的浏览体验
+        </div>
+        <div class="h4 text-center text-normal ie-text">
+            您正在使用的浏览器并非最新版本！升级至火狐浏览器，获取最佳的Airbnb体验。
+        </div>
+        <form action="http://www.mozilla.org/firefox" target="_blank" id="install-browser-form">
+            <input class="btn ie-btn" type="submit" value="安装火狐浏览器">
+        </form>
+
+        <script>
+        (function () {
+            var isIE = function () {
+                var nav = navigator.userAgent.toLowerCase();
+                return nav.indexOf('msie') != -1 ? parseInt(nav.split('msie')[1]) : false;
+            };
+
+            var trackRequest = function (event_name) {
+                if (window.XMLHttpRequest) {
+                    var request = new XMLHttpRequest();
+                } else {
+                    var request = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                request.open("POST", "/tracking/events", false);
+                request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+                request.send('{ "event_name" : "ie_' + isIE() + '_' + event_name + '" }');
+            };
+
+            var closeModal = function () {
+                document.getElementById('ie-modal-bg').style.display='none';
+                document.getElementById('ie-modal-content').style.display='none';
+            };
+
+            document.getElementById("ie-close-button").onclick = closeModal;
+            document.getElementById("install-browser-form").onsubmit = function () {
+                trackRequest("click");
+            };
+
+            trackRequest("impression");
+            })();
+        </script>
+    </div>
+
     <![endif]-->
 
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
 
 </head>
 <body>
@@ -110,7 +159,7 @@
                 <form class="form-inline">
                     <div class="form-group has-feedback">
                         <label for="search_address" class="sr-only control-label">地点</label>
-                        <input type="text" class="form-control" id="search_address" placeholder="地点">
+                        <input type="text" class="form-control" id="search_address" placeholder="你想去哪里">
                         <span class="glyphicon glyphicon-map-marker form-control-feedback" aria-hidden="true"></span>      
                     </div>
                     <div class="form-group has-feedback">
@@ -456,95 +505,221 @@
         </div>
         <!-- 领略全球特色 end -->
 
-        <hr style="border-top: 1px solid #ccc;height: 1px;width: 94%;padding-left:15px;padding-right:15px;" />
-
         <!-- 我们的社区 start -->
         <div class="our-community">
             <div class="m-column-name">
                 <div class="h3"><strong>我们的社区</strong></div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 community-container">
-                <div class="community-info">
-                    <div class="h3"></div>
-                    <p class="community-description"></p>
-                    <div class="tag">
-                        <div class="white-font"></div>
+            <div class="community-container row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="community-info community-card-middle text-center community-make-friend">
+                        <div class="panel">
+                           <a class="community-card-link media-photo" href="javascript:void(0);">
+                               <div class="media-cover media-cover-dark background-cover">
+                                   
+                               </div>
+                               <div class="community-card-header">
+                                   <div class="community-card-header-label"><strong>结交家庭</strong></div>
+                               </div>
+                               <div class="row row-table row-full-height text-contrast">
+                                    <div class="col-sm-10 col-center col-bottom">
+                                        <div class="h3"><strong>家庭介绍</strong></div>
+                                        <div class="space-4">   
+                                           <p class="community-description">展示交友范围和家庭条件
+                                           <br><br><u>是否愿意提供短期食宿,小孩寒暑假期间是否可以提供文化交流,语言学习</u></p> 
+                                        </div>
+                                    </div>
+                               </div>
+                           </a> 
+                        </div>
+                    </div>       
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="community-info community-card-middle text-center community-travel-tips">
+                        <div class="panel">
+                           <a class="community-card-link media-photo" href="javascript:void(0);">
+                               <div class="media-cover media-cover-dark background-cover">
+                                   
+                               </div>
+                               <div class="community-card-header">
+                                   <div class="community-card-header-label"><strong>旅游攻略</strong></div>
+                               </div>
+                               <div class="row row-table row-full-height text-contrast">
+                                    <div class="col-sm-10 col-center col-bottom">
+                                        <div class="h3"><strong>图片视频</strong></div>
+                                        <div class="space-4">   
+                                           <p class="community-description">类似博客的旅游攻略、旅游日记、联谊活动展示
+                                           <br><br><u>查看别人的旅游攻略</u></p> 
+                                        </div>
+                                    </div>
+                               </div>
+                           </a> 
+                        </div>
+                    </div>       
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="community-info community-card-middle text-center community-publish-imformation">
+                        <div class="panel">
+                           <a class="community-card-link media-photo" href="javascript:void(0);">
+                               <div class="media-cover media-cover-dark background-cover">
+                                   
+                               </div>
+                               <div class="community-card-header">
+                                   <div class="community-card-header-label"><strong>发布信息</strong></div>
+                               </div>
+                               <div class="row row-table row-full-height text-contrast">
+                                    <div class="col-sm-10 col-center col-bottom">
+                                        <div class="h3"><strong>房源信息</strong></div>
+                                        <div class="space-4">   
+                                           <p class="community-description">家庭信息或自己将要举办的活动的信息
+                                           <br><br><u>了解如何通过Airbnb旅行。</u></p> 
+                                        </div>
+                                    </div>
+                               </div>
+                           </a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="community-info community-card-middle text-center community-understand-us">
+                        <div class="panel">
+                           <a class="community-card-link media-photo" href="javascript:void(0);">
+                               <div class="media-cover media-cover-dark background-cover">
+                                   
+                               </div>
+                               <div class="community-card-header">
+                                   <div class="community-card-header-label"><strong>了解我们</strong></div>
+                               </div>
+                               <div class="row row-table row-full-height text-contrast">
+                                    <div class="col-sm-10 col-center col-bottom">
+                                        <div class="h3"><strong>通过了解</strong></div>
+                                        <div class="space-4">   
+                                           <p class="community-description">半家进行交友联谊或旅途住宿
+                                           <br><br><u>可以了解如何通过半家进行交友联谊或旅途住宿</u></p> 
+                                        </div>
+                                    </div>
+                               </div>
+                           </a> 
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 以信任为基础的社区 end -->
+            <div class="support-service hidden-xs hidden-sm">
+                <div class="page-container-full panel-hackberry panel-contrast text-center">
+                    <div class="page-container-responsive">
+                        <div class="row row-space-top-8 text-white">
+                            <h2>以信任为基础的社区</h2>
+                        </div>
+                    </div>
+                </div>      
+                <div class="service-container">
+                    <div class="col-lg-4 col-md-4 service-tag text-center">
+                        <div class="service-logo">
+                            <span class="icon-IE iconsfont"></span>
+                        </div>
+                        <div class="h4">微博验证</div>
+                        <p class="service-desciption"> 使用您的微博帐户登录以验证您的身份。<a href="javascript:void(0);" class="learn-more">了解更多</a></p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 service-tag text-center">
+                        <div class="service-logo">
+                            <span class="icon-chrome iconsfont"></span>
+                        </div>
+                        <div class="h4">可信赖的服务</div>
+                        <p class="service-desciption"> 维护Airbnb社区的信任和安全是我们的首要任务。<a href="javascript:void(0);" class="learn-more">了解更多</a></p>   
+                    </div>
+                    <div class="col-lg-4 col-md-4 service-tag text-center">
+                        <div class="service-logo">
+                            <span class="icon-firefox iconsfont"></span>
+                        </div>
+                        <div class="h4">安全支付</div>
+                        <p class="service-desciption"> 支付宝付款现已面向中国用户开通，欢迎使用。<a href="javascript:void(0);" class="learn-more">了解更多</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 community-container">
-                <div class="community-info">
-                    <div class="h3"></div>
-                    <p class="community-description"></p>
-                    <div class="tag">
-                        <div class="white-font"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 community-container">
-                <div class="community-info">
-                    <div class="h3"></div>
-                    <p class="community-description"></p>
-                    <div class="tag">
-                        <div class="white-font"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 community-container">
-                <div class="community-info">
-                    <div class="h3"></div>
-                    <p class="community-description"></p>
-                    <div class="tag">
-                        <div class="white-font"></div>
-                    </div>
-                </div>
-            </div>
+            <!-- 以信任为基础的社区 start -->
         </div>
         <!-- 我们的社区 end -->
 
-        <!-- 以信任为基础的社区 end -->
-        <div class="support-service">
-            <div class="m-column-name">
-                <div class="h3"><strong>以信任为基础的社区</strong></div>
-            </div>
-            <div class="service-container">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 service-tag">
-                    <div class="service-logo"></div>
-                    <div class="h4"></div>
-                    <p class="service-desciption"></p>
-                    <a href="" class="learn-more"></a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 service-tag">
-                    <div class="service-logo"></div>
-                    <div class="h4"></div>
-                    <p class="service-desciption"></p>
-                    <a href="" class="learn-more"></a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 service-tag">
-                    <div class="service-logo"></div>
-                    <div class="h4"></div>
-                    <p class="service-desciption"></p>
-                    <a href="" class="learn-more"></a>
-                </div>
-            </div>
-        </div>
-        <!-- 以信任为基础的社区 start -->
+        
 
         <!-- 关注我们 start -->
-        <div class="follow-us">
-            <div class="follow-container">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select-lang"></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 about-us"></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 about-us"></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 about-us"></div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 about-us"></div>
-                <hr style="border-top: 1px solid #ccc;height: 1px;width: 94%;padding-left:15px;padding-right:15px;" />
-                <div class="copy-right">
-                    <div class="h4"><strong>关注我们</strong></div>
-                    <div class="follow-logo"></div>
-                    <div class="right"></div>
+        <div class="follow-us container-brand-dark footer-surround footer-container" id="footer">
+            <footer class="page-container-responsive">
+                <div class="follow-container row row-condensed">
+
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-5 col-md-offset-1 select-lang-curr">
+                        <div class="language-curr-picker clearfix">
+                            <form class="select select-large select-block row-space-2 form-horizontal">
+                                <div class="form-group">
+                                    <label for="select-lang" id="language-selector-label" class="screen-reader-only"></label>
+                                    <select name="" id="select-lang" class="language-selector form-control" aria-labelledby="language-selector-label">
+                                        <option value="">简体中文</option>
+                                        <option value="">繁體中文</option>
+                                        <option value="">English</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select-curr" id="currency-selector-label" class="screen-reader-only"></label>
+                                    <select name="" id="select-curr" class="currency-selector form-control" aria-labelledby="currency-selector-label">
+                                        <option value="">CNY</option>
+                                        <option value="">USD</option>
+                                        <option value="">JPY</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="cx-number">
+                            客服电话
+                            <br>
+                            国内：400-890-0309
+                            <br>
+                            海外：+86-10-5904-5310
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 about-us">
+                        <div class="h5 text-center"><strong>公司信息</strong></div>
+                        <ul class="list-layout">
+                            <li><a href="javascript:void(0);" class="link-contrast">关于</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">工作机会</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">新闻</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">博客</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">帮助</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">政策</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">灾难响应</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">条款与隐私</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 hidden-xs hidden-sm about-us">
+                        <div class="h5 text-center"><strong>出租</strong></div>
+                        <ul class="list-layout">
+                            <li><a href="javascript:void(0);" class="link-contrast">为啥要出租？</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">好客之道</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">房东义务</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">居家安全</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs hidden-sm about-us">
+                        <div class="h5 text-center"><strong>交友</strong></div>
+                        <ul class="list-layout">
+                            <li><a href="javascript:void(0);" class="link-contrast">为什么要交友？</a></li>
+                            <li><a href="javascript:void(0);" class="link-contrast">世界那么大，谁会与我相遇</a></li>
+                        </ul>
+                    </div>
+                    <hr style="border-top: 1px solid #ccc;height: 1px;width: 94%;padding-left:15px;padding-right:15px;" />
+                    <div class="copy-right text-center">
+                        <div class="h4"><strong>关注我们</strong></div>
+                        <div class="follow-logo">
+                            <span class="icon-windows iconsfont"></span>
+                            <span class="icon-android iconsfont"></span>
+                        </div>
+                        <div class="right">© fengyuanzemin</div>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
         <!-- 关注我们 end -->
     </div>
